@@ -62,15 +62,16 @@ if (isset($_POST['add'])){
   else{
     if($typeCanAdd=='organizer'){
       $dept = $pieces[0];
-      if($dept == 'cse') $tag = 'TZCS';
-      else if($dept == 'ece') $tag = 'TZEC';
-      else if($dept == 'civil') $tag = 'TZCE';
-      else if($dept == 'mech') $tag = 'TZME';
-      else if($dept == 'chem') $tag = 'TZCHE';
-      else if($dept == 'mme') $tag = 'TZMME';
-      else if($dept == 'puc') $tag = 'TZPUC';
-      mysqli_query($connection,"");
-      mysqli_query($connection,"INSERT INTO competitions(eveID,eveName,eveDepartment) VALUES('TZCS01','$username','$dept')");
+      if($dept == 'cse') $tag = 'TZCS0';
+      else if($dept == 'ece') $tag = 'TZEC0';
+      else if($dept == 'civil') $tag = 'TZCE0';
+      else if($dept == 'mech') $tag = 'TZME0';
+      else if($dept == 'chem') $tag = 'TZCHE0';
+      else if($dept == 'mme') $tag = 'TZMME0';
+      else if($dept == 'puc') $tag = 'TZPUC0';
+      $nOfrows = mysqli_num_rows(mysqli_query($connection,"SELECT * FROM competitions WHERE eveDepartment='$dept'"));
+      $tag = $tag.(string)($nOfrows+1);
+      mysqli_query($connection,"INSERT INTO competitions(eveID,eveName,eveDepartment) VALUES('$tag','$username','$dept')");
     }
     $query3 = "INSERT INTO adminusrs(usrEmail,usrRole,usrName,usrPwd,usrPriority) VALUES('$useremail' , '$typeCanAdd' , '$username@$typeCanAdd', '$defaultPwd' , '$userPriority')";
     $response3 = mysqli_query($connection,$query3);
