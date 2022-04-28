@@ -69,7 +69,6 @@ if (isset($_POST['add'])){
       else if($dept == 'chem') $tag = 'TZCHE';
       else if($dept == 'mme') $tag = 'TZMME';
       else if($dept == 'puc') $tag = 'TZPUC';
-      
       mysqli_query($connection,"");
       mysqli_query($connection,"INSERT INTO competitions(eveID,eveName,eveDepartment) VALUES('TZCS01','$username','$dept')");
     }
