@@ -16,6 +16,7 @@ include "./includes/getBack.php";
       width: 100px;
       height:100px;
     }
+
     @media (max-width:720px){
         .heightClass{
             width: 400px;
@@ -56,6 +57,7 @@ include "./includes/getBack.php";
       $fetchedcontact = $row['contact_info'];
       $fetchedimg = $row['eveImg'];
       $fetchedsponimg = $row['sponImg'];
+      $fetchedRegistrations = $row['isRegistrationsOpened'];
   }
 
 ?>
@@ -75,21 +77,22 @@ if (isset($_POST['addEve'])){
     $contact = $_POST['contact'];
     $eveimg = $_FILES['eveimg']['name'];
     $sponimg = $_FILES['sponimg']['name'];
+    $registrations = $_POST['registrations'];
     $upload = 'images/';
     move_uploaded_file($_FILES['eveimg']['tmp_name'],$upload.basename($_FILES['eveimg']['name']));
     move_uploaded_file($_FILES['sponimg']['tmp_name'],$upload.basename($_FILES['sponimg']['name']));
 
     if($eveimg){
-      mysqli_query($connection,"UPDATE competitions SET eveImg = '$eveimg',about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact' WHERE eveName='$pieces[0]'");
+      mysqli_query($connection,"UPDATE competitions SET eveImg = '$eveimg',about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact',isRegistrationsOpened='$registrations' WHERE eveName='$pieces[0]'");
     }
     if($sponimg){
-      mysqli_query($connection,"UPDATE competitions SET about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact',sponImg = '$sponimg' WHERE eveName='$pieces[0]'");
+      mysqli_query($connection,"UPDATE competitions SET about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact',sponImg = '$sponimg',isRegistrationsOpened='$registrations' WHERE eveName='$pieces[0]'");
     }
     if($eveimg && $sponimg){
-      mysqli_query($connection,"UPDATE competitions SET eveImg = '$eveimg',about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact',sponImg = '$sponimg' WHERE eveName='$pieces[0]'");
+      mysqli_query($connection,"UPDATE competitions SET eveImg = '$eveimg',about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact',sponImg = '$sponimg',isRegistrationsOpened='$registrations' WHERE eveName='$pieces[0]'");
     }
     if(!$eveimg || !$sponimg){
-      mysqli_query($connection,"UPDATE competitions SET about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact' WHERE eveName='$pieces[0]'");
+      mysqli_query($connection,"UPDATE competitions SET about = '$about',structure = '$structure',timeline = '$timeline',faq = '$faq',rules = '$rules',contact_info = '$contact',isRegistrationsOpened='$registrations' WHERE eveName='$pieces[0]'");
     }
 
     echo "<div class='alert alert-warning' role='alert'>Updating....</div>";
@@ -154,6 +157,22 @@ if (isset($_POST['addEve'])){
           <textarea class="form-control heightClass" placeholder="Contact" name="contact" <?php if($user!='organizer'){echo "disabled";} ?>><?php echo $fetchedcontact; ?></textarea>
         </div>
         <br />
+        <?php 
+          if($fetchedRegistrations==1){
+            echo "Currently registrations opened";
+          }
+          else{
+            echo "Currently registrations closed";
+          }
+        ?>
+        <div class="form-group">
+          <input type="radio" name="registrations" value="1">
+          Open         
+          <br>
+          <input type="radio" name="registrations" value="0" checked>
+          Close
+        </div>
+        <br>
         <center><input type="submit" class="btn btn-primary" name="addEve" value="Update"></input></center>
       </form>
     </div>
