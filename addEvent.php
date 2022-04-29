@@ -21,6 +21,11 @@ include "./includes/getBack.php";
         .heightClass{
             width: 400px;
         }
+        form{
+          width:95%;
+          margin: 0 auto;
+          overflow-x: hidden;
+        }
     }
     @media (max-width:420px){
         .heightClass{
@@ -166,10 +171,10 @@ if (isset($_POST['addEve'])){
           }
         ?>
         <div class="form-group">
-          <input type="radio" name="registrations" value="1">
+          <input type="radio" name="registrations" value="1" <?php if($fetchedRegistrations==1){echo "checked";} ?>>
           Open         
           <br>
-          <input type="radio" name="registrations" value="0" checked>
+          <input type="radio" name="registrations" value="0" <?php if($fetchedRegistrations==0){echo "checked";} ?>>
           Close
         </div>
         <br>
