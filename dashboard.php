@@ -192,7 +192,6 @@ if($user=='manager' && $pieces[0]=='events'){
                     if ($fetchedsponimg){
                       echo "<img src='images/$fetchedsponimg' class='eveimage'>";
                     }
-
             }
         }
         echo "<br>";
@@ -228,9 +227,3 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 </script>
-
-
-
-
-
-
