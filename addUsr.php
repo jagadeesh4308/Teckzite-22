@@ -1,6 +1,6 @@
 <?php 
 
-include "./includes/header.php";
+include "./includes/admin-header.php";
 include "./includes/getBack.php";
 include "./includes/connect.php";
 
@@ -13,7 +13,7 @@ if($user=='organizer'){
 <?php 
 
 
-include "./includes/nav.php";
+include "./includes/admin-nav.php";
 
 $typeCanAdd = '';
 $defaultPwd = generatePwd(6);
@@ -109,6 +109,6 @@ if (isset($_POST['add'])){
 
 <?php 
 
-include "./includes/footer.php";
+include "./includes/admin-footer.php";
 
 ?>

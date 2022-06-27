@@ -1,7 +1,7 @@
 <?php 
 
 include "./includes/connect.php";
-include "./includes/header.php";
+include "./includes/admin-header.php";
 include "./includes/usrGetBack.php";
 
 ?>
@@ -98,5 +98,5 @@ if (isset($_POST['updateProfile'])){
 
 
 <?php 
-    include "./includes/footer.php";
+    include "./includes/admin-footer.php";
 ?>

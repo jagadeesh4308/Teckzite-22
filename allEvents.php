@@ -1,6 +1,6 @@
 <?php 
 
-include "./includes/header.php";
+include "./includes/admin-header.php";
 include "./includes/connect.php";
 
 ?>
@@ -35,6 +35,6 @@ if(mysqli_num_rows($response)>0){
 
 <?php 
 
-include "./includes/footer.php";
+include "./includes/admin-footer.php";
 
 ?>

@@ -1,7 +1,7 @@
 <?php 
-    include "./includes/header.php";
+    include "./includes/admin-header.php";
     include "./includes/getBack.php";
-    include "./includes/nav.php";
+    include "./includes/admin-nav.php";
     include "./includes/connect.php";
 ?>
 
@@ -62,6 +62,6 @@ if (isset($_POST['change'])){
 
 <?php 
 
-include "includes/footer.php"
+include "includes/admin-footer.php"
 
 ?>

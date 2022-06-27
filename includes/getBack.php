@@ -7,7 +7,7 @@ $usernameOriginal = $_SESSION['name'];
 $pieces = explode("@",$usernameOriginal);
 
 if(!$user){
-    header("Location:index.php");
+    header("Location:admin.php");
 }
 
 ?>
