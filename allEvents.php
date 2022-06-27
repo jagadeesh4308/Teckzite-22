@@ -24,16 +24,9 @@ if(mysqli_num_rows($response)>0){
     echo "<div class='row'";
     while($row = mysqli_fetch_assoc($response)){
         $fetchedEvent = $row['eveName'];
-        // $fetchedAbout = $row['about'];
-        // $fetchedstructure = $row['structure'];
-        // $fetchedtimeline = $row['timeline'];
-        // $fetchedfaq = $row['faq'];
-        // $fetchedRules = $row['rules'];
-        // $fetchedcontact = $row['contact_info'];
-        $fetchedimg = $row['eveImg'];
-        // $fetchedsponimg = $row['sponImg'];
+        $fetchedDept = $row['eveDepartment'];
 
-        echo "<img src='images/$fetchedimg'>$fetchedEvent<br><a href='eventDetails.php?id=$fetchedEvent'>View</a>";
+        echo "<img src='images/$fetchedimg'>$fetchedEvent<br><a href='eventDetails.php?id=$fetchedEvent&dept=$fetchedDept'>View</a>";
     }
     echo "</div>";
 }

@@ -19,7 +19,8 @@ include "./includes/usrGetBack.php";
     if(mysqli_num_rows($response) > 0){
         //Fetch the user from DB
         $row = mysqli_fetch_assoc($response);
-        $_SESSION['tzID'] = $row["tzID"];
+        $_SESSION['tzID'] = $tzid = $row["tzID"];
+        $_SESSION['dept'] = $row["branch"];
         $profileUpdated = $row["isProfileUpdated"];
         //If all conditions satisfies redirect to home page
         if($profileUpdated){

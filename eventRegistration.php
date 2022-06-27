@@ -7,10 +7,10 @@ include "./includes/usrGetBack.php";
 $id = $_GET['id'];
 $min = $_GET['min'];
 $max = $_GET['max'];
+$department = $_GET['dept'];
 if(!($id && $min && $max)){
     header("Location:allEvents.php");
 }
-
 
 ?>
 
@@ -18,19 +18,25 @@ if(!($id && $min && $max)){
 
 if (isset($_POST['register'])){
     $members = $usrid;
-    for($i = 0; $i < count($_POST["members"]); $i++) {
+    if($min==1 && $max==1){
+        mysqli_query($connection,"INSERT INTO eventsRegistrations(eveName,members,regStatus) VALUES('$id' , '$members' , '1' )");
+    } 
+    else{
+        for($i = 0; $i < count($_POST["members"]); $i++) {
         if($_POST["members"][$i]){
             $members = $members."_".$_POST["members"][$i];
         }
     }
     
-    mysqli_query($connection,"INSERT INTO eventsRegistrations(eveName,members,acceptedBy) VALUES('$id' , '$members' , '$usrid' )");
-    echo $members; 
+        mysqli_query($connection,"INSERT INTO eventsRegistrations(eveName,members,acceptedBy) VALUES('$id' , '$members' , '$usrid' )");
+        echo $members;
+    }
 }
 
 ?>
 
 <br><br>
+
 <center>
     <form action="#" method="post">
             <?php 
@@ -52,6 +58,12 @@ if (isset($_POST['register'])){
                 }
             ?>
             <br>
-            <input type="submit" value="Register" name='register' class="btn btn-primary">
+            <?php 
+                if($department==$dept)echo "<input type='submit' value='Register' name='register' class='btn btn-primary'>";
+                else{
+                    echo "<div class='alert alert-warning' role='alert'>You not belongs to this branch....</div>";
+                    header("refresh: 2; url = allEvents.php");
+                }
+            ?>
     </form>
 </center>
