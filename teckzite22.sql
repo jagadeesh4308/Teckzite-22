@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 06, 2022 at 09:58 AM
+-- Generation Time: Jun 27, 2022 at 11:56 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -110,15 +110,16 @@ CREATE TABLE `eventsRegistrations` (
   `members` varchar(255) NOT NULL,
   `acceptedBy` varchar(255) DEFAULT NULL,
   `rejectedBy` varchar(255) DEFAULT NULL,
-  `status` int(10) DEFAULT 0
+  `regStatus` int(10) DEFAULT 100
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `eventsRegistrations`
 --
 
-INSERT INTO `eventsRegistrations` (`sno`, `eveName`, `members`, `acceptedBy`, `rejectedBy`, `status`) VALUES
-(1, 'sql master', 'TZ00001_TZ0002_TZ00004_TZ000005', 'TZ00001', NULL, 0);
+INSERT INTO `eventsRegistrations` (`sno`, `eveName`, `members`, `acceptedBy`, `rejectedBy`, `regStatus`) VALUES
+(1, 'sql master', 'TZ00001_TZ0002_TZ00004_TZ000005', 'TZ00001', NULL, 100),
+(7, 'hackathon', 'TZ00001', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -144,7 +145,7 @@ CREATE TABLE `tzUsrs` (
 --
 
 INSERT INTO `tzUsrs` (`sno`, `tzID`, `usrEmail`, `usrName`, `state`, `town`, `collegeName`, `year`, `branch`, `isProfileUpdated`) VALUES
-(11, 'TZ00001', 'jagadeesh4308@gmail.com', 'Jagadeesh Koppula', '', '', '', '', '', 1);
+(11, 'TZ00001', 'jagadeesh4308@gmail.com', 'Jagadeesh Koppula', 'ap', 'Nuzvid', 'RGUKT', 'e1', 'cse', 1);
 
 --
 -- Indexes for dumped tables
@@ -194,7 +195,7 @@ ALTER TABLE `competitions`
 -- AUTO_INCREMENT for table `eventsRegistrations`
 --
 ALTER TABLE `eventsRegistrations`
-  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tzUsrs`
