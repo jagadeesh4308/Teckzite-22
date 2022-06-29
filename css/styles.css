@@ -105,15 +105,19 @@ a {
   font-size: 2vw;
   cursor:pointer;
 }
-/* #two div:nth-child(1){
-  background:#19d2a6;
-  color:black;
-} */
-#two div:hover{
-  background:#19d2a6;
-  color:black;
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.x{
+  background:#19d2a6 !important;
+  color:black !important;
+  font-weight: bold !important;
 }
-/*  */
+.hider{
+  display: none !important;
+}
+.shower{
+  display: flex !important;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 #three{
   padding:10vh 0 0 0;
   /*  */
@@ -125,14 +129,44 @@ a {
   align-items: center;
 }
 #departments{
-  height:100vh;
+  height:max-content;
+  width:80%;
+  /*  */
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#dfilters{
+  /* height:30%; */
   width:80%;
   /*  */
   display: flex;
-  overflow: scroll;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+#dfilters button{
+  height:40px;
+  width:120px;
+  border: 1px solid rgb(25, 210, 166);
+  border-radius: 10px;
+  /*  */
+  background:transparent;
+  color:white;
+  /*  */
+  cursor: pointer;
+}
+#cards_container{
+  transition: 1s;
+  padding: 5% 0 0 0;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow-x:hidden;
 }
 .card{
   margin: 0 0 10vh 0;
@@ -187,9 +221,9 @@ a {
 #talks{
   height:100vh;
   /* width:100vw; */
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;  
 }
 #thead{
@@ -273,5 +307,9 @@ a {
   display: flex;
 }
 #guestCard:hover #gctop,#guestCard:hover #gcbottom{
+  display: none;
+}
+/*  */
+#centerstage{
   display: none;
 }
