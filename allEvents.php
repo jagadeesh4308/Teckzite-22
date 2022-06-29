@@ -25,6 +25,7 @@ if(mysqli_num_rows($response)>0){
     while($row = mysqli_fetch_assoc($response)){
         $fetchedEvent = $row['eveName'];
         $fetchedDept = $row['eveDepartment'];
+        $fetchedimg = $row['eveImg'];
 
         echo "<img src='images/$fetchedimg'>$fetchedEvent<br><a href='eventDetails.php?id=$fetchedEvent&dept=$fetchedDept'>View</a>";
     }
