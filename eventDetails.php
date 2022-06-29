@@ -91,6 +91,7 @@ if(mysqli_num_rows($response)>0){
 
     echo "<img src='images/$fetchedimg'>$fetchedEvent<br>";
 
+    // echo $status;
     if($status==0 || $status==-1){
         if($department == $_SESSION['dept'])
             echo "<a href='eventRegistration.php?id=$fetchedEvent&min=$min&max=$max&dept=$department'>Register</a>";
@@ -116,6 +117,8 @@ if(mysqli_num_rows($response)>0){
             echo "You are being collaberated and waiting for confirmation";
         }
     }
+
+    // echo $status;
     
 }
 
