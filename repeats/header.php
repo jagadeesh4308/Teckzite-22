@@ -37,7 +37,7 @@
             </ul>
           </div>
           <div class="nav_row_half nav_row_svg">
-            <svg width="1000" height="34" viewBox="0 0 956.16 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="990" height="34" viewBox="0 0 956.16 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_535_1114)">
               <path d="M4 25H198.42C206.903 25 215.247 22.8417 222.666 18.7281L243.328 7.27186C250.747 3.15832 259.09 1 267.573 1H1305" stroke="url(#paint0_linear_535_1114)" stroke-opacity="0.58" stroke-width="2" shape-rendering="crispEdges"></path></g>
               <defs>
