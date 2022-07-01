@@ -424,16 +424,27 @@ h1{
 @media screen and (max-width:800px){
   #one{
     flex-direction: column;
-    height:55vh !important;
+    height:90vh !important;
+    /* margin-top: 5vh;; */
     width:100vw;
   }
   #oneleft{
+    height:55% !important;
     width:90% !important;
+    justify-content: space-evenly !important;
+  }
+  #oneleft h1{
+    height:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #oneleft #text{
+    height:70%;
     text-align: justify;
   }
   #oneright{
+    height:45% !important;
     width:100% !important;
     justify-content: center !important;
   }
@@ -454,10 +465,10 @@ h1{
   }
   #dfilters{
     height:7vh !important;
-    width:100% !important;
-    /* flex-direction: row; */
+    width:90vw !important;
     overflow-x: scroll;
     flex-wrap: nowrap;
+    flex-direction: row !important;
     justify-content: unset !important;
     align-items: unset !important;
   }
@@ -476,10 +487,13 @@ h1{
     justify-content: center !important;
   }
   /* ------------------EVENTS_INFO------------------- */
+  #emain{
+    height: 270vh !important;
+  }
   #eone{
     justify-content: space-evenly !important;
     flex-direction: column !important;
-    height:70vh !important;
+    height:90vh !important;
   }
   #emain section{
     width:90vw !important;
@@ -487,6 +501,12 @@ h1{
   #emain #eone #o1,#emain #eone #o2{
     height:unset;
     width:90% !important;
+  }
+  #ethree{
+    height:60vh !important;
+  }
+  #efour{
+    height: max-content !important;
   }
   #o2 h1,#o2 p{
     height:unset !important;
