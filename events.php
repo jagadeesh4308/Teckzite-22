@@ -48,11 +48,11 @@ include "./repeats/header.php";
               <button id="mech" data-filter="mech">Mech</button>
             </div>
             <div id="cards_container">
-              <script>var patch = '<div class="card cse"><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">cse</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card ece"><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">Electronic and Communication</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card chem"><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">chem</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<4;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card civil"><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">civil</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<10;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card mech"><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">mech</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card cse"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">cse</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card ece"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">Electronic and Communication</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card chem"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">chem</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<4;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card civil"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">civil</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<10;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card mech"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">mech</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
             </div>
             <!------------CARD--------------->
             <!-- <div class="card cse">
@@ -83,12 +83,12 @@ include "./repeats/header.php";
             <span id="thead">Talks</span>
             <div id="guests">
                 <script>
-                    var patch = '<div id="guestCard"><button id="viewmore">View Details</button><div id="gctop"><img src="images/elon.jpg" alt="guest_pic"></div><div id="gcbottom"><div id="gcbt"><span id="name">Elon Musk</span><span id="designation">Founder of SpaceX, Paypal</span></div><div id="gcbb"><h6>Topic:</h6><span id="tdesc">lorem ipsum thathum mammamm goem poem pora thuyyam</span></div></div></div>';
+                    var patch = '<div id="guestCard"><button class="viewmore">View Details</button><div id="gctop"><img src="images/elon.jpg" alt="guest_pic"></div><div id="gcbottom"><div id="gcbt"><span id="name">Elon Musk</span><span id="designation">Founder of SpaceX, Paypal</span></div><div id="gcbb"><h6>Topic:</h6><span id="tdesc">lorem ipsum thathum mammamm goem poem pora thuyyam</span></div></div></div>';
                     for(var i=0;i<4;i++){document.write(patch);}
                 </script>
                 <!------------GUEST_CARD--------------->
                 <!-- <div id="guestCard">
-                    <button id="viewmore">View Details</button>
+                    <button class="viewmore">View Details</button>
                     <div id="gctop">
                         <img src="images/elon.jpg" alt="guest_pic">
                     </div>
@@ -108,5 +108,10 @@ include "./repeats/header.php";
         </div>
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     </section>
+    <script>
+      $(".viewmore").click(function(){
+        window.location.href = "event_info.php";
+      });
+    </script>
 </body>
 </html>

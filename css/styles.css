@@ -9,6 +9,10 @@
 body {
   background: rgb(7, 7, 10);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* ------------byme---------------- */
 #one {
@@ -87,7 +91,7 @@ body {
   padding: 10vh 0 0 0;
   /*  */
   height: max-content;
-  /* width:100vw; */
+  width:100%;
   /*  */
   display: flex;
   justify-content: center;
@@ -139,6 +143,11 @@ body {
   height: 300px;
   width: 275px;
   border: 1px solid #1f3530;
+  /*  */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #cardtop {
   height: 80%;
@@ -260,7 +269,7 @@ body {
   color: #19d2a6;
   font-size: 10px;
 }
-#guestCard button {
+.viewmore{
   display: none;
   background: #19d2a6;
   color: white;
@@ -268,14 +277,237 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-#guestCard:hover button {
+#guestCard:hover button, .card:hover button {
   display: flex;
 }
 #guestCard:hover #gctop,
 #guestCard:hover #gcbottom {
   display: none;
 }
+.card:hover #cardtop,
+.card:hover #cardbottom {
+  display: none;
+}
 /*  */
 #centerstage {
   display: none;
+}
+/*~~~~~~~~~~~~~~EVENT-DETAILS-CSS~~~~~~~~~~~~~~~~~~~~~*/
+#emain{
+    height:220vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+#emain section{
+  width:75%;
+  background:rgb(15, 15, 18);
+}
+#emain #eone{
+    margin: 2% 0 0 0;
+    height:60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#emain #eone #o1{
+    height:80%;
+    width:45%;
+}
+#emain #eone #o1 img{
+  width:100%;
+}
+#o2{
+    height:80%;
+    width:45%;
+    color:white;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+#o2 h1{
+  height:30%;
+  font-size: 40px;
+}
+#o2 p{
+  height: 40%;;
+}
+#o2buttons{
+  height:45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#o2buttons button{
+  width:max-content;
+  padding:10px;
+  background: rgb(25, 210, 166);
+  color:black;
+  cursor:pointer;
+  font-weight: bold;
+  border:none;
+}
+h1{
+    font-size: 20px;
+    color:rgb(25, 210, 166);
+}
+#emain #etwo{
+  height:20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#emain #etwo #t1,#emain #etwo #t3{
+  width:49%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin: 0 0 0 12%;
+}
+#emain #etwo #t2{
+  height:60%;
+  border-left:2px solid white;
+}
+#emain #ethree{
+  height:40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2% 0 2% 0;
+}
+#emain #ethree *,#emain #efour *{
+  width:90%;
+  font-weight: bold
+}
+#emain #efour{
+  height:50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#emain #efive{
+  height:15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#emain #efive *{
+  margin: 0 0 0 4%;
+}
+/* ~~~~~~~~~~~~~WORKSHOPS_PAGE_STYLES~~~~~~~~~~~~~~~~~~ */
+.wone{
+  margin: 6% 0 0 0;
+  width:75% !important;
+  background:rgb(15, 15, 18);
+}
+.wone #oneleft{
+  width:50% !important;
+  padding: 0 5% 0 0% !important;
+  justify-content: space-evenly !important;
+}
+.wone #oneright{
+  justify-content: center !important;
+  width:55% !important;
+}
+.wthree{
+  width:80% !important;
+}
+/* ------------------RESPONSIVENESS------------------------ */
+@media screen and (max-width:800px){
+  #one{
+    flex-direction: column;
+    height:55vh !important;
+    width:100vw;
+  }
+  #oneleft{
+    width:90% !important;
+  }
+  #oneleft #text{
+    text-align: justify;
+  }
+  #oneright{
+    width:100% !important;
+    justify-content: center !important;
+  }
+  #oneleft #heading{
+    width:100%;
+    text-align: center;
+    font-size: 30px;
+    /* font-size: 2vw; */
+  }
+  #two{
+    height:7vh !important;
+  }
+  #two div{
+    font-size: 3vw !important;
+  }
+  #three{
+    padding: 3vh 0 0 0 !important;
+  }
+  #dfilters{
+    height:7vh !important;
+    width:100% !important;
+    /* flex-direction: row; */
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    justify-content: unset !important;
+    align-items: unset !important;
+  }
+  #dfilters button{
+    margin: 0 2% 0 2%;
+    flex-shrink: 0;
+  }
+  #talks{
+    width:100vw !important
+  }
+  #thead{
+    font-size: 5vw !important;
+  }
+  #guests {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  /* ------------------EVENTS_INFO------------------- */
+  #eone{
+    justify-content: space-evenly !important;
+    flex-direction: column !important;
+    height:70vh !important;
+  }
+  #emain section{
+    width:90vw !important;
+  }
+  #emain #eone #o1,#emain #eone #o2{
+    height:unset;
+    width:90% !important;
+  }
+  #o2 h1,#o2 p{
+    height:unset !important;
+  }
+  #o2buttons{
+    align-items: center;
+  }
+  #o2buttons button{
+    margin: 2% 0 0 2%;
+  }
+  .wone{
+    height: unset !important;
+    /* height:80vh !important; */
+    width:90vw !important;
+  }
+  .wone #oneright{
+    width:100% !important;
+
+  }
+  .wone #oneleft{
+    width:90% !important;
+    padding:unset !important;
+  }
 }

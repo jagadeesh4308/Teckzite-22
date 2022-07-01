@@ -24,8 +24,8 @@
             <a href="#" class="nav_logo"><img src="./images/logo.png" alt=""></a>
             <ul class="nav_list">
               <li class="nav_list_item"><a href="index.php" class="nav_link">Home</a></li>
-              <li class="nav_list_item"><a href="#" class="nav_link">Events</a></li>
-              <li class="nav_list_item"><a href="#" class="nav_link">Workshops</a></li>
+              <li class="nav_list_item"><a href="events.php" class="nav_link">Events</a></li>
+              <li class="nav_list_item"><a href="workshops.php" class="nav_link">Workshops</a></li>
               <li class="nav_list_item"><a href="#" class="nav_link">About</a></li>
               <li class="nav_list_item"><a href="#" class="nav_link">Contact</a></li>
             </ul>
