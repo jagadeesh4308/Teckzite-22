@@ -60,12 +60,12 @@ a {
 
 .nav_login {
   padding: 0.2em 1em;
-  border: 1px solid white;
+  border: 1px solid #19D2A6;
   font-size: 14px;
   color: white;
   position: relative;
   top: 12px;
-  left: -5.5em;
+  left: -4.5em;
 }
 
 .menu {
