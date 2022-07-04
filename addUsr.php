@@ -4,7 +4,7 @@ include "./includes/admin-header.php";
 include "./includes/getBack.php";
 include "./includes/connect.php";
 
-if($user=='organizer'){
+if($user=='organizer' || $user=='w_organizer'){
   header("Location:dashboard.php");
 }
 
@@ -32,9 +32,13 @@ if($user=="convenor") {
   $typeCanAdd = "manager";
   $userPriority = 2;
 }
-else if($user=="manager") {
+else if($user=="manager" && $pieces[0]!='workshops') {
   $typeCanAdd = "coordinator";
   $userPriority = 3;
+}
+else if($user=="manager" && $pieces[0]=='workshops') {
+  $typeCanAdd = "w_organizer";
+  $userPriority = 4;
 }
 else if($user=="coordinator") {
   $typeCanAdd = "organizer";
@@ -72,6 +76,9 @@ if (isset($_POST['add'])){
       $nOfrows = mysqli_num_rows(mysqli_query($connection,"SELECT * FROM competitions WHERE eveDepartment='$dept'"));
       $tag = $tag.(string)($nOfrows+1);
       mysqli_query($connection,"INSERT INTO competitions(eveID,eveName,eveDepartment) VALUES('$tag','$username','$dept')");
+    }
+    if($typeCanAdd=='w_organizer'){
+      mysqli_query($connection,"INSERT INTO workshops(workshopName) VALUES('$username')");
     }
     $query3 = "INSERT INTO adminusrs(usrEmail,usrRole,usrName,usrPwd,usrPriority) VALUES('$useremail' , '$typeCanAdd' , '$username@$typeCanAdd', '$defaultPwd' , '$userPriority')";
     $response3 = mysqli_query($connection,$query3);

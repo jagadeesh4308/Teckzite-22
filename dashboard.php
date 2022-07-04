@@ -201,9 +201,58 @@ if($user=='manager' && $pieces[0]=='events'){
 
 
 
+if($user=='manager' && $pieces[0]=='workshops'){
+    echo "<br><center>Manager of <b style='text-transform:uppercase;'>".$pieces[0]."</b></center></br>";
+    $fetchedWorkshop = '';
+    $fetchedAbout = '';   
+    $fetchedstructure = '';
+    $fetchedRules = '';
+    $fetchedcontact = '';
+    $fetchedimg = '';
+    $response = mysqli_query($connection,"SELECT * FROM workshops");
+        if(mysqli_num_rows($response)>0){
+            echo "<center>From Department of <b style='text-transform:uppercase;'>$dept</b></center><br><br>";
+            while($row = mysqli_fetch_assoc($response)){
+                $fetchedWorkshop = $row['workshopName'];
+                $fetchedAbout = $row['about'];
+                $fetchedstructure = $row['structure'];
+                $fetchedcontact = $row['contact'];
+                $fetchedimg = $row['workshopImg'];
+                echo "<br><br><center><button class='accordion'> <b>$fetchedWorkshop</b> </button>
+                    <div class='panel'>
+                    <br>
+                        <div class='form-group'>
+                         <textarea class='form-control heightClass' placeholder='About' disabled> $fetchedAbout </textarea>
+                     </div> 
+                     <br>
+                     <div class='form-group'>
+                         <textarea class='form-control heightClass' placeholder='Rules' disabled> $fetchedstructure </textarea>
+                     </div>
+                     <br>
+                     <div class='form-group'>
+                         <textarea class='form-control heightClass' placeholder='Contact' disabled> $fetchedcontact </textarea>
+                     </div>
+                    </div><br></center>";
+                    if ($fetchedimg){
+                      echo "<img src='images/$fetchedimg' class='eveimage'>";
+                    }
+            }
+        }
+        echo "<br>";
+
+}
+
+
+
+
+
 //giving editing oppurtunity to organizer
 if($user=='organizer'){
     include "addEvent.php";
+}
+
+if($user=='w_organizer'){
+  include "addWorkshop.php";
 }
 
 ?>

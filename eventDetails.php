@@ -1,6 +1,6 @@
 <?php 
 
-include "./includes/header.php";
+include "./includes/admin-header.php";
 include "./includes/connect.php";
 
 ?>
@@ -24,7 +24,6 @@ include "./includes/connect.php";
 
 $fetchedEvent = $min = $max = '';
 $eve = $_GET['id'];
-$department = $_GET['dept'];
 
 if(!$eve){
     header("Location:allEvents.php");
@@ -76,7 +75,6 @@ $response = mysqli_query($connection,"SELECT * FROM competitions WHERE eveName='
 if(mysqli_num_rows($response)>0){
 
     $row = mysqli_fetch_assoc($response);
-    echo "<div class='row'";
     $fetchedEvent = $row['eveName'];
     $fetchedAbout = $row['about'];
     $fetchedstructure = $row['structure'];
@@ -86,10 +84,11 @@ if(mysqli_num_rows($response)>0){
     $fetchedcontact = $row['contact_info'];
     $fetchedimg = $row['eveImg'];
     $fetchedsponimg = $row['sponImg'];
+    $department = $row['eveDepartment'];
     $min = $row['minTeam'];
     $max = $row['maxTeam'];
 
-    echo "<img src='images/$fetchedimg'>$fetchedEvent<br>";
+    echo $fetchedEvent;
 
     // echo $status;
     if($status==0 || $status==-1){

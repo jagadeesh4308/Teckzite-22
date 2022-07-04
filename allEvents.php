@@ -27,7 +27,7 @@ if(mysqli_num_rows($response)>0){
         $fetchedDept = $row['eveDepartment'];
         $fetchedimg = $row['eveImg'];
 
-        echo "<img src='images/$fetchedimg'>$fetchedEvent<br><a href='eventDetails.php?id=$fetchedEvent&dept=$fetchedDept'>View</a>";
+        echo "<img src='images/$fetchedimg'>$fetchedEvent<br><a href='eventDetails.php?id=$fetchedEvent'>View</a>";
     }
     echo "</div>";
 }

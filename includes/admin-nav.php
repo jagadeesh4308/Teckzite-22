@@ -17,7 +17,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="dashboard.php">Home</a>
       <?php 
-        if($user!='organizer'){
+        if($user!='organizer' && $user!='w_organizer'){
             echo "<a href='addUsr.php' class='nav-item nav-link'>Add user</a>";
         }
       ?>
