@@ -1,0 +1,108 @@
+  #one{
+    flex-direction: column;
+    height:90vh !important;
+    /* margin-top: 5vh;; */
+    width:100vw;
+  }
+  #oneleft{
+    height:55% !important;
+    width:90% !important;
+    justify-content: space-evenly !important;
+  }
+  #oneleft h1{
+    height:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #oneleft #text{
+    height:70%;
+    text-align: justify;
+  }
+  #oneright{
+    height:45% !important;
+    width:100% !important;
+    justify-content: center !important;
+  }
+  #oneleft #heading{
+    width:100%;
+    text-align: center;
+    font-size: 30px;
+    /* font-size: 2vw; */
+  }
+  #two{
+    height:7vh !important;
+  }
+  #two div{
+    font-size: 3vw !important;
+  }
+  #three{
+    padding: 3vh 0 0 0 !important;
+  }
+  #dfilters{
+    height:7vh !important;
+    width:90vw !important;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+    flex-direction: row !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+  }
+  #dfilters button{
+    margin: 0 2% 0 2%;
+    flex-shrink: 0;
+  }
+  #talks{
+    width:100vw !important
+  }
+  #thead{
+    font-size: 5vw !important;
+  }
+  #guests {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  /* ------------------EVENTS_INFO------------------- */
+  #emain{
+    height: 270vh !important;
+  }
+  #eone{
+    justify-content: space-evenly !important;
+    flex-direction: column !important;
+    height:90vh !important;
+  }
+  #emain section{
+    width:90vw !important;
+  }
+  #emain #eone #o1,#emain #eone #o2{
+    height:unset;
+    width:90% !important;
+  }
+  #ethree{
+    height:60vh !important;
+  }
+  #efour{
+    height: max-content !important;
+  }
+  #o2 h1,#o2 p{
+    height:unset !important;
+  }
+  #o2buttons{
+    align-items: center;
+  }
+  #o2buttons button{
+    margin: 2% 0 0 2%;
+  }
+  .wone{
+    height: unset !important;
+    /* height:80vh !important; */
+    width:90vw !important;
+  }
+  .wone #oneright{
+    width:100% !important;
+
+  }
+  .wone #oneleft{
+    width:90% !important;
+    padding:unset !important;
+  }
