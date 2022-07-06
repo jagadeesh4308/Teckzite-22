@@ -48,11 +48,11 @@ include "./repeats/header.php";
               <button id="mech" data-filter="mech">Mech</button>
             </div>
             <div id="cards_container">
-              <script>var patch = '<div class="card cse"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">cse</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card ece"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">Electronic and Communication</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card chem"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">chem</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<4;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card civil"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">civil</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<10;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card mech"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">mech</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card cse"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">cse</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card ece"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">Electronic and Communication</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card chem"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">chem</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<4;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card civil"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">civil</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<10;i++){document.write(patch);}</script>
+              <script>var patch = '<div class="card mech"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">mech</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
             </div>
             <!------------CARD--------------->
             <!-- <div class="card cse">
@@ -70,16 +70,16 @@ include "./repeats/header.php";
                 var value = $(this).attr("data-filter");
                 $(this).addClass("x").siblings().removeClass("x");
                 if(this.id == "all"){
-                  $("#cards_container .card").show('1000');
+                  $("#cards_container .card").show("50");
                 }else{
-                  $("#cards_container .card").not('.'+value).hide('1000');
-                  $("#cards_container .card").filter('.'+value).show('1000');
+                  $("#cards_container .card").not('.'+value).hide("50");
+                  $("#cards_container .card").filter('.'+value).show("50");
                 }
               });
             </script>
         </div>
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-        <div id="talks" class="">
+        <div id="talks">
             <span id="thead">Talks</span>
             <div id="guests">
                 <script>

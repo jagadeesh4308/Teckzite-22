@@ -11,7 +11,6 @@ include "./repeats/header.php";
             <h1 id="heading">Workshops</h1>
             <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, qui eaque necessitatibus eius quos voluptate distinctio aliquid deleniti voluptatem odit dignissimos possimus minima dolorem ab natus in enim corporis eum!</p>
         </div>
-
     </section>
     <section id="three" class="wthree">
             <div id="cards_container">
