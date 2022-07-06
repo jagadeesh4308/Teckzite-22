@@ -20,14 +20,14 @@ body {
   width: 100%;
   /* display: grid; */
   /* grid-template-columns: 42vw 42vw; */
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 #one #oneleft {
   height: 80%;
-  width:40%;
+  width: 40%;
   /* */
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ body {
   /* margin: 0 0 0 5vw; */
   /*  */
   height: 80%;
-  width:40%;
+  width: 40%;
   /*  */
   display: flex;
   justify-content: flex-end;
@@ -91,7 +91,7 @@ body {
   padding: 10vh 0 0 0;
   /*  */
   height: max-content;
-  width:100%;
+  width: 100%;
   /*  */
   display: flex;
   justify-content: center;
@@ -269,7 +269,7 @@ body {
   color: #19d2a6;
   font-size: 10px;
 }
-.viewmore{
+.viewmore {
   display: none;
   background: #19d2a6;
   color: white;
@@ -277,7 +277,8 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-#guestCard:hover button, .card:hover button {
+#guestCard:hover button,
+.card:hover button {
   display: flex;
 }
 #guestCard:hover #gctop,
@@ -293,193 +294,194 @@ body {
   display: none;
 }
 /*~~~~~~~~~~~~~~EVENT-DETAILS-CSS~~~~~~~~~~~~~~~~~~~~~*/
-#emain{
-    height:220vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-
+#emain {
+  height: 220vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#emain section{
-  width:75%;
-  background:rgb(15, 15, 18);
+#emain section {
+  width: 75%;
+  background: rgb(15, 15, 18);
 }
-#emain #eone{
-    margin: 2% 0 0 0;
-    height:60vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+#emain #eone {
+  margin: 2% 0 0 0;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-#emain #eone #o1{
-    height:80%;
-    width:45%;
+#emain #eone #o1 {
+  height: 80%;
+  width: 45%;
 }
-#emain #eone #o1 img{
-  width:100%;
+#emain #eone #o1 img {
+  width: 100%;
 }
-#o2{
-    height:80%;
-    width:45%;
-    color:white;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly; */
+#o2 {
+  height: 80%;
+  width: 45%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
 }
-#o2 h1{
-  height:30%;
+#o2 h1 {
+  height: 30%;
   font-size: 40px;
 }
-#o2 p{
-  height: 40%;;
+#o2 p {
+  height: 40%;
 }
-#o2buttons{
-  height:45%;
+#o2buttons {
+  height: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
-#o2buttons button{
-  width:max-content;
-  padding:10px;
+#o2buttons button {
+  width: max-content;
+  padding: 10px;
   background: rgb(25, 210, 166);
-  color:black;
-  cursor:pointer;
+  color: black;
+  cursor: pointer;
   font-weight: bold;
-  border:none;
+  border: none;
 }
-h1{
-    font-size: 20px;
-    color:rgb(25, 210, 166);
+h1 {
+  font-size: 20px;
+  color: rgb(25, 210, 166);
 }
-#emain #etwo{
-  height:20vh;
+#emain #etwo {
+  height: 20vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#emain #etwo #t1,#emain #etwo #t3{
-  width:49%;
+#emain #etwo #t1,
+#emain #etwo #t3 {
+  width: 49%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
   margin: 0 0 0 12%;
 }
-#emain #etwo #t2{
-  height:60%;
-  border-left:2px solid white;
+#emain #etwo #t2 {
+  height: 60%;
+  border-left: 2px solid white;
 }
-#emain #ethree{
-  height:40vh;
+#emain #ethree {
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   padding: 2% 0 2% 0;
 }
-#emain #ethree *,#emain #efour *{
-  width:90%;
-  font-weight: bold
+#emain #ethree *,
+#emain #efour * {
+  width: 90%;
+  font-weight: bold;
 }
-#emain #efour{
-  height:50vh;
+#emain #efour {
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
-#emain #efive{
-  height:15vh;
+#emain #efive {
+  height: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#emain #efive *{
+#emain #efive * {
   margin: 0 0 0 4%;
 }
 /* ~~~~~~~~~~~~~WORKSHOPS_PAGE_STYLES~~~~~~~~~~~~~~~~~~ */
-.wone{
+.wone {
   margin: 6% 0 0 0;
-  width:75% !important;
-  background:rgb(15, 15, 18);
+  width: 75% !important;
+  background: rgb(15, 15, 18);
 }
-.wone #oneleft{
-  width:50% !important;
+.wone #oneleft {
+  width: 50% !important;
   padding: 0 5% 0 0% !important;
   justify-content: space-evenly !important;
 }
-.wone #oneright{
+.wone #oneright {
   justify-content: center !important;
-  width:55% !important;
+  width: 55% !important;
 }
-.wthree{
-  width:80% !important;
+.wthree {
+  width: 80% !important;
 }
 /* ------------------RESPONSIVENESS------------------------ */
-@media screen and (max-width:800px){
-  #one{
+@media screen and (max-width: 1080px) {
+  #one {
     flex-direction: column;
-    height:90vh !important;
+    height: 90vh !important;
     /* margin-top: 5vh;; */
-    width:100vw;
+    width: 100vw;
   }
-  #oneleft{
-    height:55% !important;
-    width:90% !important;
+  #oneleft {
+    height: 55% !important;
+    width: 90% !important;
     justify-content: space-evenly !important;
   }
-  #oneleft h1{
-    height:30%;
+  #oneleft h1 {
+    height: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  #oneleft #text{
-    height:70%;
+  #oneleft #text {
+    height: 70%;
     text-align: justify;
   }
-  #oneright{
-    height:45% !important;
-    width:100% !important;
+  #oneright {
+    height: 45% !important;
+    width: 100% !important;
     justify-content: center !important;
   }
-  #oneleft #heading{
-    width:100%;
+  #oneleft #heading {
+    width: 100%;
     text-align: center;
     font-size: 30px;
     /* font-size: 2vw; */
   }
-  #two{
-    height:7vh !important;
+  #two {
+    height: 7vh !important;
   }
-  #two div{
+  #two div {
     font-size: 3vw !important;
   }
-  #three{
+  #three {
     padding: 3vh 0 0 0 !important;
   }
-  #dfilters{
-    height:7vh !important;
-    width:90vw !important;
+  #dfilters {
+    height: 12vh !important;
+    width: 90vw !important;
     overflow-x: scroll;
     flex-wrap: nowrap;
     flex-direction: row !important;
     justify-content: unset !important;
     align-items: unset !important;
   }
-  #dfilters button{
+  #dfilters button {
     margin: 0 2% 0 2%;
     flex-shrink: 0;
   }
-  #talks{
-    width:100vw !important
+  #talks {
+    width: 100vw !important;
   }
-  #thead{
+  #thead {
     font-size: 5vw !important;
   }
   #guests {
@@ -487,47 +489,57 @@ h1{
     justify-content: center !important;
   }
   /* ------------------EVENTS_INFO------------------- */
-  #emain{
+  #emain {
     height: 270vh !important;
   }
-  #eone{
+  #eone {
     justify-content: space-evenly !important;
     flex-direction: column !important;
-    height:90vh !important;
+    height: 90vh !important;
   }
-  #emain section{
-    width:90vw !important;
+  #emain section {
+    width: 90vw !important;
   }
-  #emain #eone #o1,#emain #eone #o2{
-    height:unset;
-    width:90% !important;
+  #emain #eone #o1,
+  #emain #eone #o2 {
+    height: unset;
+    width: 90% !important;
   }
-  #ethree{
-    height:60vh !important;
+  #ethree {
+    height: 60vh !important;
   }
-  #efour{
+  #efour {
     height: max-content !important;
   }
-  #o2 h1,#o2 p{
-    height:unset !important;
+  #o2 h1,
+  #o2 p {
+    height: unset !important;
   }
-  #o2buttons{
+  #o2buttons {
     align-items: center;
   }
-  #o2buttons button{
+  #o2buttons button {
     margin: 2% 0 0 2%;
   }
-  .wone{
+  .wone {
     height: unset !important;
     /* height:80vh !important; */
-    width:90vw !important;
+    width: 90vw !important;
   }
-  .wone #oneright{
-    width:100% !important;
+  .wone #oneright {
+    width: 100% !important;
+  }
+  .wone #oneleft {
+    width: 90% !important;
+    padding: unset !important;
+  }
+}
 
-  }
-  .wone #oneleft{
-    width:90% !important;
-    padding:unset !important;
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 400px) {
+  #two div {
+    width: calc(100% / 3);
   }
 }
