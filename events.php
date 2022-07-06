@@ -1,6 +1,7 @@
 <?php 
 
 include "./repeats/header.php";
+include "./includes/connect.php";
 
 ?>
     <section id="one">
@@ -34,6 +35,9 @@ include "./repeats/header.php";
         });
       });
     </script>
+
+
+
     <section id="three">
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
         <div id="centerstage" class="shower">centerstage</div>
@@ -48,11 +52,43 @@ include "./repeats/header.php";
               <button id="mech" data-filter="mech">Mech</button>
             </div>
             <div id="cards_container">
-              <script>var patch = '<div class="card cse"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">cse</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card ece"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">Electronic and Communication</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card chem"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">chem</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<4;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card civil"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">civil</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<10;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card mech"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span class="text">mech</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+
+              <?php 
+              
+                $response = mysqli_query($connection,"SELECT * FROM competitions");
+                if(mysqli_num_rows($response)>0){
+                  while($row = mysqli_fetch_assoc($response)){
+                      $fetchedEvent = $row['eveName'];
+                      $fetchedDept = $row['eveDepartment'];
+                      $fetchedimg = $row['eveImg'];
+
+                      echo "<div class='card $fetchedDept'>
+                                  <button class='viewmore'>
+                                    <a href='eventDetails.php?id=$fetchedEvent'>View more</a>
+                                  </button>
+                                  <div id='cardtop'> "; ?> 
+                                  
+                                  <?php 
+                                  
+                                  if($fetchedimg==NULL){
+                                    echo "<img src='images/card_back.jpg' alt='card_back'>";
+                                  }
+                                  else{
+                                    echo "<img src='images/$fetchedimg' alt='card_back'>";
+                                  }
+                                  
+                                  
+                                  echo "</div>
+                                  <div id='cardbottom'>
+                                      <span class='text'>$fetchedEvent</span>
+                                      <span id='logo'><span style='color:#19d2a6;'>></span>></span>
+                                  </div>
+                            </div>";
+                  }
+                }
+              
+              ?>
+
             </div>
             <!------------CARD--------------->
             <!-- <div class="card cse">
@@ -108,10 +144,10 @@ include "./repeats/header.php";
         </div>
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     </section>
-    <script>
+    <!-- <script>
       $(".viewmore").click(function(){
         window.location.href = "event_info.php";
       });
-    </script>
+    </script> -->
 </body>
 </html>

@@ -153,6 +153,7 @@ body {
 }
 #cardtop img {
   height: 85%;
+  width: 90%;
 }
 #cardbottom {
   height: 20%;
@@ -162,6 +163,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.viewmore a {
+  text-decoration: none;
+  color: rgb(15, 15, 18);
 }
 .text {
   height: 100%;
