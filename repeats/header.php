@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="nav_row">
-          <a href="#" class="nav_login">LOGIN</a>
+          <a href="./login.php" class="nav_login">LOGIN</a>
         </div>
       </div>
     </nav>
