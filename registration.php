@@ -83,7 +83,7 @@ if (isset($_POST['updateProfile'])){
                     <option value="ece">ECE</option>
                 </select>
             </div>
-            <input type="submit" class="btn btn-primary" name="updateProfile" value="Update"></input>
+            <input type="submit" id='rsubmit' name="updateProfile" value="Update"></input>
     </form>
 
 
