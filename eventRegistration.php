@@ -9,7 +9,7 @@ $min = $_GET['min'];
 $max = $_GET['max'];
 $department = $_GET['dept'];
 if(!($id && $min && $max)){
-    header("Location:allEvents.php");
+    header("Location:events.php");
 }
 
 ?>
@@ -62,7 +62,7 @@ if (isset($_POST['register'])){
                 if($department==$dept)echo "<input type='submit' value='Register' name='register' class='btn btn-primary'>";
                 else{
                     echo "<div class='alert alert-warning' role='alert'>You not belongs to this branch....</div>";
-                    header("refresh: 2; url = allEvents.php");
+                    header("refresh: 2; url = events.php");
                 }
             ?>
     </form>

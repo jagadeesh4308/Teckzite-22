@@ -5,6 +5,4 @@ include "./includes/usrGetBack.php";
 
 echo "Do payment here";
 
-echo "<a href='logout.php'>Logout</a>";  
-
 ?>
