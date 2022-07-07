@@ -58,10 +58,10 @@ if (isset($_POST['updateProfile'])){
 <h1 id="rhead">REGISTRATION</h1>
     <form id="rform" method="post" action="#" enctype="multipart/form-data">
         <!-- -------------- -->
-        <textarea disabled><?php echo $tzid="TZ220089"; ?></textarea>
+        <textarea id="tid" disabled><?php echo $tzid="TZ220089"; ?></textarea>
         <!-- -------------- -->
         <br>
-            <!-- <input type="text" value="<?php echo $username="Sherkhan";?>" disabled> -->
+            <input type="text" value="<?php echo $username="Sherkhan";?>" disabled>
             <input type="text" value="<?php echo $useremail="sherkhan@outlook.com";?>" disabled>    
             <div id="gp1">
                 <select name="state" >
@@ -84,7 +84,7 @@ if (isset($_POST['updateProfile'])){
                     <option value="ece">ECE</option>
                 </select>
             </div>
-            <input type="submit" class="btn btn-primary" name="updateProfile" value="Update"></input>
+            <input id="rsubmit" type="submit" name="updateProfile" value="Update"></input>
         <a href='logout.php'>Logout</a>  
     </form>
 
