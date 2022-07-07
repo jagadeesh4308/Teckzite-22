@@ -429,7 +429,7 @@ h1 {
   width: 80% !important;
 }
 /* ------------------RESPONSIVENESS------------------------ */
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 900px) {
   #one {
     flex-direction: column;
     height: max-content;
