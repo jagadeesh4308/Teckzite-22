@@ -2,7 +2,6 @@
 
 include "./includes/connect.php";
 include "./repeats/header.php";
-/*
 include "./includes/usrGetBack.php";
 ?>
 
@@ -53,16 +52,16 @@ if (isset($_POST['updateProfile'])){
     mysqli_query($connection,"UPDATE tzUsrs SET state = '$state',town = '$town',collegeName = '$collegename',year = '$year',branch = '$branch',isProfileUpdated = '1' WHERE usrEmail='$useremail'");
     header("Location:payment.php");
 }
-*/
+
 ?>
 <h1 id="rhead">REGISTRATION</h1>
     <form id="rform" method="post" action="#" enctype="multipart/form-data">
         <!-- -------------- -->
-        <textarea id="tid" disabled><?php echo $tzid="TZ220089"; ?></textarea>
+        <textarea disabled><?php echo $tzid; ?></textarea>
         <!-- -------------- -->
         <br>
-            <input type="text" value="<?php echo $username="Sherkhan";?>" disabled>
-            <input type="text" value="<?php echo $useremail="sherkhan@outlook.com";?>" disabled>    
+            <input type="text" value="<?php echo $username;?>" disabled>
+            <input type="text" value="<?php echo $useremail;?>" disabled>    
             <div id="gp1">
                 <select name="state" >
                     <option value="" selected>Select State</option>
@@ -84,8 +83,7 @@ if (isset($_POST['updateProfile'])){
                     <option value="ece">ECE</option>
                 </select>
             </div>
-            <input id="rsubmit" type="submit" name="updateProfile" value="Update"></input>
-        <a href='logout.php'>Logout</a>  
+            <input type="submit" id='rsubmit' name="updateProfile" value="Update"></input>
     </form>
 
 
