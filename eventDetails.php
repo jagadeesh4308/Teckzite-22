@@ -71,58 +71,6 @@ else{
 }
 
 
-$response = mysqli_query($connection,"SELECT * FROM competitions WHERE eveName='$eve'");
-if(mysqli_num_rows($response)>0){
-
-    $row = mysqli_fetch_assoc($response);
-    $fetchedEvent = $row['eveName'];
-    $fetchedAbout = $row['about'];
-    $fetchedstructure = $row['structure'];
-    $fetchedtimeline = $row['timeline'];
-    $fetchedfaq = $row['faq'];
-    $fetchedRules = $row['rules'];
-    $fetchedcontact = $row['contact_info'];
-    $fetchedimg = $row['eveImg'];
-    $fetchedsponimg = $row['sponImg'];
-    $department = $row['eveDepartment'];
-    $min = $row['minTeam'];
-    $max = $row['maxTeam'];
-
-    echo $fetchedEvent;
-
-    // echo $status;
-    if($status==0 || $status==-1){
-        if($department == $_SESSION['dept'])
-            echo "<a href='eventRegistration.php?id=$fetchedEvent&min=$min&max=$max&dept=$department'>Register</a>";
-    }
-    if($status==1){
-        echo "You already registered";
-    }
-    if($found2==-1 && $status!=1 && $status!=0 && $usr && ($department == $_SESSION['dept']) && $found!=-1){
-        echo "Team created by $token";
-        echo "<form action='#' method='post'>
-            Accept
-            <input type='radio' name='opinion' required value='1'>
-            Reject
-            <input type='radio' name='opinion' required value='0'>
-            <input type='submit' name='opinionSubmit'>
-        </form>";
-    }
-    if($found2!=-1 && $status==100){
-        if($token==$usr)
-            echo "You created team and waiting for confirmation of other team members";
-        else{
-            echo "Created by $token";
-            echo "You are being collaberated and waiting for confirmation";
-        }
-    }
-
-    // echo $status;
-    
-}
-
-echo "<a href='logout.php'>logout</a>";
-
 if (isset($_POST['opinionSubmit'])){
     if($_POST['opinion']=='1'){
         $acceptance = $acceptance."_".$usr;

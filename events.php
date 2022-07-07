@@ -64,7 +64,7 @@ include "./includes/connect.php";
 
                       echo "<div class='card $fetchedDept'>
                                   <button class='viewmore'>
-                                    <a href='eventDetails.php?id=$fetchedEvent'>View more</a>
+                                    <a href='event_info.php?id=$fetchedEvent'>View more</a>
                                   </button>
                                   <div id='cardtop'> "; ?> 
                                   

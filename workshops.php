@@ -1,6 +1,7 @@
 <?php 
 
 include "./repeats/header.php";
+include "./includes/connect.php";
 
 ?>
     <section id="one" class="wone">
@@ -14,27 +15,45 @@ include "./repeats/header.php";
     </section>
     <section id="three" class="wthree">
             <div id="cards_container">
-              <script>var patch = '<div class="card cse"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">cse</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card ece"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">Electronic and Communication</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card chem"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">chem</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<4;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card civil"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">civil</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<10;i++){document.write(patch);}</script>
-              <script>var patch = '<div class="card mech"><button class="viewmore">View Details</button><div id="cardtop"><img src="images/card_back.jpg" alt="card_back"></div><div id="cardbottom"><span id="text">mech</span><span id="logo"><span style="color:#19d2a6;">></span>></span></div></div>';for(var i=0;i<3;i++){document.write(patch);}</script>
+
+
+                    <?php 
+                    
+                        $response = mysqli_query($connection,"SELECT * FROM workshops");
+                        if(mysqli_num_rows($response)>0){
+                            while($row = mysqli_fetch_assoc($response)){
+                                $fetchedEvent = $row['workshopName'];
+                                $fetchedDept = $row['workshopDept'];
+                                $fetchedimg = $row['workshopImg'];
+
+                                echo "<div class='card $fetchedDept'>
+                                            <button class='viewmore'>
+                                                <a href='workshop_info.php?id=$fetchedEvent'>View more</a>
+                                            </button>
+                                            <div id='cardtop'> "; ?> 
+                                            
+                                            <?php 
+                                            
+                                            if($fetchedimg==NULL){
+                                                echo "<img src='images/card_back.jpg' alt='card_back'>";
+                                            }
+                                            else{
+                                                echo "<img src='images/$fetchedimg' alt='card_back'>";
+                                            }
+                                            
+                                            
+                                            echo "</div>
+                                            <div id='cardbottom'>
+                                                <span class='text'>$fetchedEvent</span>
+                                                <span id='logo'><span style='color:#19d2a6;'>></span>></span>
+                                            </div>
+                                        </div>";
+                            }
+                        }
+              
+                    ?>
+            
             </div>
-            <!------------CARD--------------->
-            <!-- <div class="card cse">
-                <div id="cardtop">
-                    <img src="images/card_back.jpg" alt="card_back">
-                </div>
-                <div id="cardbottom">
-                    <span id="text">Electronic and Communication</span>
-                    <span id="logo"><span style="color:#19d2a6;">></span>></span>
-                </div>
-            </div> -->
     </section>
-    <script>
-      $(".viewmore").click(function(){
-        window.location.href = "event_info.php";
-      });
-    </script>
 </body>
 </html>
