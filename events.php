@@ -70,12 +70,7 @@ include "./includes/connect.php";
                                   
                                   <?php 
                                   
-                                  if($fetchedimg==NULL){
-                                    echo "<img src='images/card_back.jpg' alt='card_back'>";
-                                  }
-                                  else{
-                                    echo "<img src='images/$fetchedimg' alt='card_back'>";
-                                  }
+                                  echo "<img src='images/$fetchedimg' alt='card_back'>";
                                   
                                   
                                   echo "</div>
@@ -90,17 +85,6 @@ include "./includes/connect.php";
               ?>
 
             </div>
-            <!------------CARD--------------->
-            <!-- <div class="card cse">
-                <div id="cardtop">
-                    <img src="images/card_back.jpg" alt="card_back">
-                </div>
-                <div id="cardbottom">
-                    <span id="text">Electronic and Communication</span>
-                    <span id="logo"><span style="color:#19d2a6;">></span>></span>
-                </div>
-            </div> -->
-            <!------------CARD--------------->
             <script>
               $("#dfilters button").click(function(){
                 var value = $(this).attr("data-filter");
@@ -144,10 +128,5 @@ include "./includes/connect.php";
         </div>
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     </section>
-    <!-- <script>
-      $(".viewmore").click(function(){
-        window.location.href = "event_info.php";
-      });
-    </script> -->
 </body>
 </html>

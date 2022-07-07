@@ -5,18 +5,6 @@ include "./includes/connect.php";
 
 ?>
 
-<style>
-    .row{
-        display:flex;
-        flex-wrap:wrap;
-    }
-    .row img{
-        width:100px;
-        height:100px;
-    }
-   
-</style>
-
 <?php 
 
 $response = mysqli_query($connection,"SELECT * FROM competitions");

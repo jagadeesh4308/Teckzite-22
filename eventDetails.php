@@ -29,46 +29,6 @@ if(!$eve){
     header("Location:allEvents.php");
 }
 
-$found = -1;
-$found2 = -1;
-$status = -1;
-$token = '';
-$count = 0;
-session_start();
-$usr = $_SESSION['tzID'];
-if($usr){
-    $res = mysqli_query($connection,"SELECT * FROM eventsRegistrations WHERE eveName='$eve'");
-    if(mysqli_num_rows($res) > 0){
-        while($row = mysqli_fetch_assoc($res)){
-            $count=$count+1;
-            $members = $row['members'];
-            $pieces = explode("_",$members);
-            if(count($pieces)>1){
-                for($i=0;$i<count($pieces);$i++){
-                    if($pieces[$i]==$usr){
-                        $found=$i;
-                        break;
-                    }
-                }
-            }
-            if($found!=-1){
-                $acceptance = $row['acceptedBy'];
-                $pieces2 = explode("_",$acceptance);
-                for($i=0;$i<count($pieces2);$i++){
-                    if($usr==$pieces2[$i]){
-                        $found2 = 1;
-                    }
-                }
-                $token = $pieces2[0];
-                $status = $row['regStatus'];
-                break;
-            }
-        }
-    }
-}
-else{
-    //No user
-}
 
 
 if (isset($_POST['opinionSubmit'])){
