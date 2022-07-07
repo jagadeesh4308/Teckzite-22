@@ -29,7 +29,9 @@ if (isset($_POST['register'])){
     }
     
         mysqli_query($connection,"INSERT INTO eventsRegistrations(eveName,members,acceptedBy) VALUES('$id' , '$members' , '$usrid' )");
-        echo $members;
+        // echo $members;
+        echo "<div class='alert alert-success' role='success'>Successfully registered explore remaining events....</div>";
+        header("refresh: 1; url = events.php");
     }
 }
 

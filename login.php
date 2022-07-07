@@ -3,9 +3,6 @@
 
 <?php
 
-//index.php
-
-//Include Configuration File
 //start session on web page
 session_start();
 
@@ -30,6 +27,13 @@ $google_client->setRedirectUri('http://localhost/adminUsrRegistrations/login.php
 $google_client->addScope('email');
 
 $google_client->addScope('profile');
+
+
+
+//index.php
+
+//Include Configuration File
+// include('config.php');
 
 $login_button = '';
 
@@ -85,22 +89,20 @@ if(isset($_GET["code"]))
 
 if(!isset($_SESSION['access_token']))
 {
- $login_button = '<a href="'.$google_client->createAuthUrl().'">Login With Google</a>';
+
+//  $login_button = '<a href="'.$google_client->createAuthUrl().'">Login With Google</a>';
+  $google_client->createAuthUrl();
+
 }
+
+else{
+    header("Location: registration.php");
+}
+
+
+
 
 ?>
 
 
-<html>
-    <body>
-        <p><?php 
-            if($login_button==''){
-                 header("Location:profile.php");
-            }
-            else{
-                echo $login_button;
-            }
-        ?></p>
-    </body>
-</html>
 
