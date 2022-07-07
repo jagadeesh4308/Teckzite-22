@@ -6,7 +6,7 @@ $usrid = $_SESSION['tzID'];
 $dept = $_SESSION['dept'];
 
 if(!$usr){
-    header("Location:index.php");
+    // header("Location:index.php");
 }
 
 ?>

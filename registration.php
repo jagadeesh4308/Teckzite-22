@@ -1,13 +1,12 @@
 <?php 
 
 include "./includes/connect.php";
-include "./includes/admin-header.php";
+include "./repeats/header.php";
+/*
 include "./includes/usrGetBack.php";
-
 ?>
 
 <?php
-
     //If new user Insert to DB
     $useremail = $_SESSION['user_email_address'];
     $username = $_SESSION['user_first_name'].' '.$_SESSION['user_last_name'];
@@ -54,45 +53,38 @@ if (isset($_POST['updateProfile'])){
     mysqli_query($connection,"UPDATE tzUsrs SET state = '$state',town = '$town',collegeName = '$collegename',year = '$year',branch = '$branch',isProfileUpdated = '1' WHERE usrEmail='$useremail'");
     header("Location:payment.php");
 }
-
+*/
 ?>
-
-<br> <br>
-    <form method="post" action="#" enctype="multipart/form-data">
-        <div class="form-group">
-            <textarea class="form-control heightClass" disabled><?php echo $tzid; ?></textarea>
-        </div>
-        <br />
-        <div class="form-group">
-            <input type="text" value="<?php echo $username;?>" disabled>
-        </div>
-        <br />
-        <div class="form-group">
-            <input type="text" value="<?php echo $useremail;?>" disabled>
-        </div>
+<h1 id="rhead">REGISTRATION</h1>
+    <form id="rform" method="post" action="#" enctype="multipart/form-data">
+        <!-- -------------- -->
+        <textarea disabled><?php echo $tzid="TZ220089"; ?></textarea>
+        <!-- -------------- -->
         <br>
-        <select name="state" class="form-control">
-            <option value="" selected disabled>Select State</option>
-            <option value="ap">AP</option>
-            <option value="telangana">Telangana</option>
-        </select>
-        <br>
-        <input type="text" name="town" class="form-control" placeholder="Town">
-        <br>
-        <input type="text" name="collegeName" class="form-control" placeholder="College name">
-        <br>
-        <select name="year" id="" class="form-control">
-            <option value="" selected disabled>Select Year</option>
-            <option value="e1">E1</option>
-            <option value="e2">E2</option>
-        </select>
-        <br>
-        <select name="branch" id="" class="form-control">
-            <option value="" selected disabled>Select Branch</option>
-            <option value="cse">CSE</option>
-            <option value="ece">ECE</option>
-        </select>
-        <center><input type="submit" class="btn btn-primary" name="updateProfile" value="Update"></input></center>
+            <!-- <input type="text" value="<?php echo $username="Sherkhan";?>" disabled> -->
+            <input type="text" value="<?php echo $useremail="sherkhan@outlook.com";?>" disabled>    
+            <div id="gp1">
+                <select name="state" >
+                    <option value="" selected>Select State</option>
+                    <option value="ap">AP</option>
+                    <option value="telangana">Telangana</option>
+                </select>
+                <input type="text" name="town"  placeholder="Town">
+            </div>
+            <input type="text" name="collegeName"  placeholder="College name">
+            <div id="gp2">
+                <select name="year" id="" >
+                    <option value="" selected disabled>Select Year</option>
+                    <option value="e1">E1</option>
+                    <option value="e2">E2</option>
+                </select>
+                <select name="branch" id="" >
+                    <option value="" selected disabled>Select Branch</option>
+                    <option value="cse">CSE</option>
+                    <option value="ece">ECE</option>
+                </select>
+            </div>
+            <input type="submit" class="btn btn-primary" name="updateProfile" value="Update"></input>
         <a href='logout.php'>Logout</a>  
     </form>
 
