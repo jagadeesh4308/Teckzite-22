@@ -40,7 +40,7 @@ if(mysqli_num_rows($response)>0){
                         <h1>$fetchedEvent</h1>
                         <p>$fetchedAbout</p>
                         <div id='o2buttons'>
-                            <button id='register'>REGISTER</button>
+                            <button id='register'><a href='workshopRegistration.php?id=$fetchedEvent'>REGISTER</a></button>
                             <button id='prblemstmt'>PROBLEM STATEMENT</button>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 <?php 
 
-include "./includes/admin-header.php";
-include "./includes/connect.php";
+include "repeats/header.php";
+include "includes/connect.php";
 include "./includes/usrGetBack.php";
 
 $id = $_GET['id'];

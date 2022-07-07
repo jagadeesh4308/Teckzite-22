@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 27, 2022 at 11:56 AM
+-- Generation Time: Jul 07, 2022 at 10:52 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -57,7 +57,10 @@ INSERT INTO `adminusrs` (`usrSno`, `usrEmail`, `usrRole`, `usrName`, `usrPwd`, `
 (14, 'j789@gmail.com', 'organizer', 'hackathon@organizer', '202cb962ac59075b964b07152d234b70', 4),
 (15, 'chem@gmail.com', 'coordinator', 'chem@coordinator', '202cb962ac59075b964b07152d234b70', 3),
 (16, 'thon@gmail.com', 'organizer', 'chemithon@organizer', '202cb962ac59075b964b07152d234b70', 4),
-(17, 'renuka112@gmail.com', 'organizer', 'codemarathon@organizer', '202cb962ac59075b964b07152d234b70', 4);
+(17, 'renuka112@gmail.com', 'organizer', 'codemarathon@organizer', '202cb962ac59075b964b07152d234b70', 4),
+(19, 'j189@gmail.com', 'manager', 'workshops@manager', '202cb962ac59075b964b07152d234b70', 2),
+(21, 'j456@gmail.com', 'w_organizer', 'python@w_organizer', '202cb962ac59075b964b07152d234b70', 4),
+(22, 'n170142@gmail.com', 'organizer', 'teckinfy@organizer', '202cb962ac59075b964b07152d234b70', 4);
 
 -- --------------------------------------------------------
 
@@ -70,13 +73,12 @@ CREATE TABLE `competitions` (
   `eveID` varchar(255) NOT NULL,
   `eveName` varchar(255) NOT NULL,
   `eveDepartment` varchar(255) NOT NULL,
-  `eveImg` varchar(100) DEFAULT NULL,
-  `about` text DEFAULT NULL,
-  `structure` text DEFAULT NULL,
-  `timeline` text DEFAULT NULL,
-  `faq` text DEFAULT NULL,
-  `rules` text DEFAULT NULL,
-  `contact_info` varchar(255) DEFAULT NULL,
+  `eveImg` varchar(100) DEFAULT 'card_back.jpg',
+  `about` text DEFAULT 'Updating soon...',
+  `structure` text DEFAULT 'Updating soon...',
+  `timeline` text DEFAULT 'Updating soon...',
+  `rules` text DEFAULT 'Updating soon...',
+  `contact_info` varchar(255) DEFAULT 'Updating soon...',
   `sponImg` varchar(100) DEFAULT NULL,
   `isRegistrationsOpened` int(10) NOT NULL DEFAULT 0,
   `minTeam` int(10) NOT NULL DEFAULT 1,
@@ -87,16 +89,17 @@ CREATE TABLE `competitions` (
 -- Dumping data for table `competitions`
 --
 
-INSERT INTO `competitions` (`eveSno`, `eveID`, `eveName`, `eveDepartment`, `eveImg`, `about`, `structure`, `timeline`, `faq`, `rules`, `contact_info`, `sponImg`, `isRegistrationsOpened`, `minTeam`, `maxTeam`) VALUES
-(1, 'TZCS01', 'sql master', 'cse', 'Screenshot from 2022-03-10 22-22-08.png', 'some about to be and held ghg g h gh hgc hfhfhfg trail', 'dd hj hgm ghmgj gjkg gj mg gb mgbb gb g mkggjj jhkxd', 'fg gfdxn gh fc fgcg fghd dgh nm', 'xkjgkd given kxjld kljdgks xnbk, jaffa', 'some rules to be  ghjj jagga', ' tyh jhkj info and regards given that there was a such a estaime', 'Screenshot from 2022-04-02 13-41-46.png', 0, 3, 6),
-(2, 'TZCS01', 'anology', 'ece', NULL, 'anology  about hello', 'hik nkdfjlg ', 'hkgjj', 'kk;', 'anology rules', '', 'Screenshot from 2022-03-10 22-22-08.png', 0, 1, 1),
-(3, 'TZCS01', 'metacivil', 'civil', NULL, 'meta civil events', NULL, NULL, NULL, 'meta civil rules go', NULL, NULL, 0, 1, 1),
-(4, 'TZCS01', 'webthala', 'cse', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1),
-(5, 'TZCS01', 'pixelz', 'cse', NULL, 'pixels sbout', NULL, NULL, NULL, 'pixels rules', NULL, NULL, 0, 1, 1),
-(6, 'TZCS03', 'code ranger', 'cse', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1),
-(7, 'TZCS05', 'hackathon', 'cse', 'Screenshot from 2022-03-11 10-46-33.png', '', '', '', '', '', 'hello contact here', NULL, 1, 1, 1),
-(8, 'TZCHE01', 'chemithon', 'chem', 'Screenshot from 2022-04-02 13-41-46.png', 'about chemithon', '', '', '', '123', '', NULL, 0, 1, 1),
-(9, 'TZCS06', 'codemarathon', 'cse', 'Screenshot from 2022-03-11 10-46-27.png', 'jhjhd hkjkfd ', 'ljkjfd', '', '', '', '', 'crop.jpg', 1, 1, 1);
+INSERT INTO `competitions` (`eveSno`, `eveID`, `eveName`, `eveDepartment`, `eveImg`, `about`, `structure`, `timeline`, `rules`, `contact_info`, `sponImg`, `isRegistrationsOpened`, `minTeam`, `maxTeam`) VALUES
+(1, 'TZCS01', 'sql master', 'cse', 'Screenshot from 2022-03-10 22-22-08.png', 'some about to be and held ghg g h gh hgc hfhfhfg trail', 'dd hj hgm ghmgj gjkg gj mg gb mgbb gb g mkggjj jhkxd', 'fg gfdxn gh fc fgcg fghd dgh nm', 'some rules to be some rules to be  ghjj jagga some rules to be  ghjj jagga some rules to be  ghjj jagga some rules to be  ghjj jaggasome rules to be  ghjj jagga some rules to be  ghjj jagga  ghjj jagga', ' tyh jhkj info and regards given that there was a such a estaime', 'Screenshot from 2022-04-02 13-41-46.png', 0, 3, 6),
+(2, 'TZCS01', 'anology', 'ece', 'card_back.jpg', 'anology  about hello', 'hik nkdfjlg ', 'hkgjj', 'anology rules', '', 'Screenshot from 2022-03-10 22-22-08.png', 0, 1, 1),
+(3, 'TZCS01', 'metacivil', 'civil', NULL, 'meta civil events', NULL, NULL, 'meta civil rules go', NULL, NULL, 0, 1, 1),
+(4, 'TZCS01', 'webthala', 'cse', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1),
+(5, 'TZCS01', 'pixelz', 'cse', NULL, 'pixels sbout', NULL, NULL, 'pixels rules', NULL, NULL, 0, 1, 1),
+(6, 'TZCS03', 'code ranger', 'cse', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1),
+(7, 'TZCS05', 'hackathon', 'cse', 'Screenshot from 2022-03-11 10-46-33.png', '', '', '', '', 'hello contact here', NULL, 1, 1, 1),
+(8, 'TZCHE01', 'chemithon', 'chem', 'Screenshot from 2022-04-02 13-41-46.png', 'about chemithon', '', '', '123', '', NULL, 0, 1, 1),
+(9, 'TZCS06', 'codemarathon', 'cse', 'Screenshot from 2022-03-11 10-46-27.png', 'jhjhd hkjkfd ', 'ljkjfd', '', '', '', 'crop.jpg', 1, 1, 1),
+(10, 'TZCS07', 'teckinfy', 'cse', 'card_back.jpg', NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -118,8 +121,22 @@ CREATE TABLE `eventsRegistrations` (
 --
 
 INSERT INTO `eventsRegistrations` (`sno`, `eveName`, `members`, `acceptedBy`, `rejectedBy`, `regStatus`) VALUES
-(1, 'sql master', 'TZ00001_TZ0002_TZ00004_TZ000005', 'TZ00001', NULL, 100),
-(7, 'hackathon', 'TZ00001', NULL, NULL, 1);
+(7, 'hackathon', 'TZ00001', NULL, NULL, 1),
+(11, 'sql master', 'TZ00001_TZ0002_TZ00004', 'TZ00001', NULL, 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `talks`
+--
+
+CREATE TABLE `talks` (
+  `sno` int(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `tagline` varchar(255) NOT NULL,
+  `topic` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -145,7 +162,51 @@ CREATE TABLE `tzUsrs` (
 --
 
 INSERT INTO `tzUsrs` (`sno`, `tzID`, `usrEmail`, `usrName`, `state`, `town`, `collegeName`, `year`, `branch`, `isProfileUpdated`) VALUES
-(11, 'TZ00001', 'jagadeesh4308@gmail.com', 'Jagadeesh Koppula', 'ap', 'Nuzvid', 'RGUKT', 'e1', 'cse', 1);
+(17, 'TZ00001', 'jagadeesh4308@gmail.com', 'Jagadeesh Koppula', '', 'nuzvid', 'RGUKT', 'e2', 'cse', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `workshops`
+--
+
+CREATE TABLE `workshops` (
+  `sno` int(11) NOT NULL,
+  `workshopName` varchar(255) NOT NULL,
+  `workshopDept` varchar(255) DEFAULT NULL,
+  `about` text DEFAULT NULL,
+  `workshopImg` varchar(255) DEFAULT NULL,
+  `structure` text DEFAULT NULL,
+  `isRegistrationsOpened` int(11) DEFAULT 0,
+  `contact` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `workshops`
+--
+
+INSERT INTO `workshops` (`sno`, `workshopName`, `workshopDept`, `about`, `workshopImg`, `structure`, `isRegistrationsOpened`, `contact`) VALUES
+(1, 'python', 'cse', 'cse workshop name', 'crop.jpg', 'some structuring and rules', 0, '9177813632');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `workshopsRegistrations`
+--
+
+CREATE TABLE `workshopsRegistrations` (
+  `sno` int(255) NOT NULL,
+  `wName` varchar(255) NOT NULL,
+  `tzID` varchar(255) NOT NULL,
+  `usrEmail` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `workshopsRegistrations`
+--
+
+INSERT INTO `workshopsRegistrations` (`sno`, `wName`, `tzID`, `usrEmail`) VALUES
+(1, 'python', 'TZ00001', 'jagadeesh4308@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -170,9 +231,27 @@ ALTER TABLE `eventsRegistrations`
   ADD PRIMARY KEY (`sno`);
 
 --
+-- Indexes for table `talks`
+--
+ALTER TABLE `talks`
+  ADD PRIMARY KEY (`sno`);
+
+--
 -- Indexes for table `tzUsrs`
 --
 ALTER TABLE `tzUsrs`
+  ADD PRIMARY KEY (`sno`);
+
+--
+-- Indexes for table `workshops`
+--
+ALTER TABLE `workshops`
+  ADD PRIMARY KEY (`sno`);
+
+--
+-- Indexes for table `workshopsRegistrations`
+--
+ALTER TABLE `workshopsRegistrations`
   ADD PRIMARY KEY (`sno`);
 
 --
@@ -183,25 +262,43 @@ ALTER TABLE `tzUsrs`
 -- AUTO_INCREMENT for table `adminusrs`
 --
 ALTER TABLE `adminusrs`
-  MODIFY `usrSno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `usrSno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `competitions`
 --
 ALTER TABLE `competitions`
-  MODIFY `eveSno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `eveSno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `eventsRegistrations`
 --
 ALTER TABLE `eventsRegistrations`
-  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `sno` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `talks`
+--
+ALTER TABLE `talks`
+  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tzUsrs`
 --
 ALTER TABLE `tzUsrs`
-  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `workshops`
+--
+ALTER TABLE `workshops`
+  MODIFY `sno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `workshopsRegistrations`
+--
+ALTER TABLE `workshopsRegistrations`
+  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
