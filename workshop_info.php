@@ -8,7 +8,7 @@
     if(!$workshop){
         header("Location:workshops.php");
     }
-
+    echo "<section id='main_container'>";
 
 ?>
 
@@ -64,8 +64,10 @@ if(mysqli_num_rows($response)>0){
                     <h1>Contact</h1>
                     <p>$fetchedcontact</p>
                 </section>
-            </main>";
+            </main>
+            </section>";
 
 }
+include "repeats/footer.php";
 
 ?>

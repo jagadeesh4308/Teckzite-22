@@ -4,6 +4,7 @@ include "./repeats/header.php";
 include "./includes/connect.php";
 
 ?>
+  <section id="main_container">
     <section id="one">
         <div id="oneleft">
             <h1 id="heading">Events</h1>
@@ -35,9 +36,6 @@ include "./includes/connect.php";
         });
       });
     </script>
-
-
-
     <section id="three">
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
         <div id="centerstage" class="shower">centerstage</div>
@@ -128,5 +126,11 @@ include "./includes/connect.php";
         </div>
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
     </section>
+  </section>
 </body>
 </html>
+
+<?php 
+
+include "./repeats/footer.php";
+?>

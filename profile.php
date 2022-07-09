@@ -1,8 +1,8 @@
 <?php 
-
-    include "repeats/header.php";
+    include "repeats/header.php";echo "<section id='main_container'>";
     include "includes/connect.php";
     include "./includes/usrGetBack.php";
+
 ?>
 
 
@@ -40,3 +40,7 @@ z
         <div id="eh">REGISTERED<div id="ehi">WORKSHOPS</div></div>
     </div>
 </section>
+<?php
+    echo  "</section>";
+    include "repeats/footer.php";
+?>

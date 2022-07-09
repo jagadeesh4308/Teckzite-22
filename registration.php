@@ -1,10 +1,7 @@
 <?php 
-
-include "./includes/connect.php";
-include "./repeats/header.php";
-include "./includes/usrGetBack.php";
+    include "repeats/header.php";echo "<section id='main_container'>";
+    include "./includes/usrGetBack.php";
 ?>
-
 <?php
     //If new user Insert to DB
     $useremail = $_SESSION['user_email_address'];
@@ -129,8 +126,7 @@ if (isset($_POST['updateProfile'])){
             </div>
             <input type="submit" id='rsubmit' name="updateProfile" value="Update"></input>
     </form>
-
-
-<?php 
-    include "./includes/admin-footer.php";
+</section>
+<?php
+    include "repeats/footer.php";
 ?>

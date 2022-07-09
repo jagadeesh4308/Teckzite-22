@@ -14,6 +14,16 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+}
+#main_container{
+  height:76vh;
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  overflow-y: scroll;
 }
 /* ------------byme---------------- */
 #one {
@@ -23,6 +33,8 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  margin:3% 0 3% 0 ;
 }
 #oneleft {
   width: 40%;
@@ -51,6 +63,7 @@ body {
 }
 /*  */
 #two {
+  flex-shrink: 0;
   padding: 2vh 0 0 0;
   /*  */
   height: 12vh;
@@ -293,7 +306,7 @@ body {
 }
 /*~~~~~~~~~~~~~~EVENT-DETAILS-CSS~~~~~~~~~~~~~~~~~~~~~*/
 #emain {
-  height: 220vh;
+  height: max-content;
   width:100%;
   display: flex;
   flex-direction: column;
@@ -301,9 +314,11 @@ body {
   align-items: center;
 }
 #emain section {
+  margin: 2% 0 2% 0;
   height:max-content;
   width: 75%;
   background: rgb(15, 15, 18);
+  padding:3%;
 }
 #eone {
   margin: 2% 0 0 0;
@@ -918,3 +933,78 @@ option{background:transparent;color:black;}
     height: 10vh;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------footer--------------------------- */
+#fl,#fr{
+  position: fixed;
+  bottom:0%;
+  height:9vh;
+  width:100%;
+  width:calc(100%/3);
+  display: flex;
+  flex-direction: column;
+}
+#fl div,#fr div{
+  height:100%;
+  width:100%;
+  background:rgb(7, 7, 10);
+}
+#fl{
+  left:0%;
+  clip-path: polygon(29% 0, 100% 0%, 100% 100%, 19% 100%);
+  background: rgb(25, 210, 166);
+}
+#flb{
+  clip-path: polygon(30% 5%, 100% 5%, 100% 100%, 20% 100%);
+}
+/* ------------------- */
+#fr{
+  right:0%;
+  clip-path: polygon(0 0, 70% 0, 80% 100%, 0 100%);
+  background: rgb(25, 210, 166);
+}
+#frb{
+  clip-path: polygon(0% 5%, 69% 5%, 79% 100%, 0% 100%);
+}
+#fm{
+  position: fixed;
+  bottom:0%;
+}
+@media screen and (max-width:1200px){
+  #fl,#fr{
+    height:5vh;
+  }
+  #fl{
+    clip-path: polygon(29% 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+  #flb{
+    clip-path: polygon(30% 5%, 100% 5%, 100% 100%, 2% 100%);
+  }
+  /* ------------------- */
+  #fr{
+    clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+  }
+  #frb{
+    clip-path: polygon(0% 5%, 69% 5%, 99% 100%, 0% 100%);
+  }  
+}
+/* ---------------------------footer--------------------------- */
