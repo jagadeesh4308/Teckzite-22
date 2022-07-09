@@ -294,12 +294,14 @@ body {
 /*~~~~~~~~~~~~~~EVENT-DETAILS-CSS~~~~~~~~~~~~~~~~~~~~~*/
 #emain {
   height: 220vh;
+  width:100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 #emain section {
+  height:max-content;
   width: 75%;
   background: rgb(15, 15, 18);
 }
