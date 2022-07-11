@@ -17,13 +17,24 @@ body {
   overflow-x: hidden;
 }
 #main_container{
-  height:76vh;
+  height:77vh;
   width:100vw;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   overflow-y: scroll;
+}
+#main_container::-webkit-scrollbar{
+  width:6px;
+  height: 0px;
+}
+#main_container::-webkit-scrollbar-thumb{
+  /* background: #19d2a6; */
+  /* background:radial-gradient(#19d2a6,transparent); */
+  background:linear-gradient(transparent,#19d2a6);
+  /* border-radius: 5px 0 0 5px; */
+  border-radius: 10px;
 }
 /* ------------byme---------------- */
 #one {
@@ -935,24 +946,6 @@ option{background:transparent;color:black;}
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------------------footer--------------------------- */
 #fl,#fr{
   position: fixed;
@@ -1019,7 +1012,7 @@ option{background:transparent;color:black;}
 }
 @media screen and (max-width:1200px){
   #fl,#fr{
-    height:5vh;
+    height:5%;
   }
   #fl{
     clip-path: polygon(29% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -1035,13 +1028,13 @@ option{background:transparent;color:black;}
     clip-path: polygon(0% 5%, 69% 5%, 99% 100%, 0% 100%);
   }
   .fa{
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
   #flb a:hover .fa{
     font-size: 2.1vw;
   }
   #fm{
-    height: 5vh;
+    height: 5%;
     font-size: 1vw;
     z-index: 6;
     display: flex;
@@ -1049,4 +1042,8 @@ option{background:transparent;color:black;}
     align-items: center;
   }
 }
-/* ---------------------------footer--------------------------- */
+/* ---------------------------ABOUT US--------------------------- */
+.about_us_container h1{
+  padding:3%;
+  font-size: 2em;;
+}

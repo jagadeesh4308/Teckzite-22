@@ -43,8 +43,8 @@
 .nav_row_half .nav_list {
   padding-left: 5em;
 }
-.nav_row_half .nav_list:hover .nav_list ul li{
-  color:#19D2A6;
+li:hover a{
+  color:#19D2A6 !important;
 }
 .nav_row_half .nav_list .nav_list_item {
   display: inline-block;
