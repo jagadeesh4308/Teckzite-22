@@ -968,6 +968,10 @@ option{background:transparent;color:black;}
   width:100%;
   background:rgb(7, 7, 10);
 }
+.fa{
+  font-size: 2.5vw;
+  color: rgb(25, 210, 166);
+}
 #fl{
   left:0%;
   clip-path: polygon(29% 0, 100% 0%, 100% 100%, 19% 100%);
@@ -975,6 +979,16 @@ option{background:transparent;color:black;}
 }
 #flb{
   clip-path: polygon(30% 5%, 100% 5%, 100% 100%, 20% 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#flb a{
+  margin-right: 10%;
+}
+#flb a:hover .fa{
+  font-size: 2.6vw;
+  border-bottom: 1px solid rgb(25, 210, 166);
 }
 /* ------------------- */
 #fr{
@@ -984,10 +998,24 @@ option{background:transparent;color:black;}
 }
 #frb{
   clip-path: polygon(0% 5%, 69% 5%, 79% 100%, 0% 100%);
+  display: flex;
+  align-items: center;
+  font-size: 1vw;
+}
+#frb h1{
+  font-size: 2vw;;
+  width:70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#frb h1 a{
+  color:unset;
 }
 #fm{
   position: fixed;
   bottom:0%;
+  text-align: center;
 }
 @media screen and (max-width:1200px){
   #fl,#fr{
@@ -1005,6 +1033,20 @@ option{background:transparent;color:black;}
   }
   #frb{
     clip-path: polygon(0% 5%, 69% 5%, 99% 100%, 0% 100%);
-  }  
+  }
+  .fa{
+    font-size: 2vw;
+  }
+  #flb a:hover .fa{
+    font-size: 2.1vw;
+  }
+  #fm{
+    height: 5vh;
+    font-size: 1vw;
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* ---------------------------footer--------------------------- */
