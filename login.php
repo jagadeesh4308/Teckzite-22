@@ -99,9 +99,6 @@ else{
     header("Location: registration.php");
 }
 
-
-
-
 ?>
 
 
