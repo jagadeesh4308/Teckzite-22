@@ -2,6 +2,7 @@
 
     include "repeats/header.php";
     include "includes/connect.php";
+    include "includes/session_data.php";
 
     $workshop = $_GET['id'];
 
@@ -9,6 +10,18 @@
         header("Location:workshops.php");
     }
     echo "<section id='main_container'>";
+
+?>
+
+
+<?php 
+
+$found = 0;
+
+$response = mysqli_query($connection,"SELECT * FROM workshopsRegistrations WHERE wName='$workshop' AND tzID='$usrid'");
+if(mysqli_num_rows($response)>0){
+    $found = 1;
+}
 
 ?>
 
@@ -40,8 +53,16 @@ if(mysqli_num_rows($response)>0){
                         <h1>$fetchedEvent</h1>
                         <p>$fetchedAbout</p>
                         <div id='o2buttons'>
-                            <button id='register'><a href='workshopRegistration.php?id=$fetchedEvent'>REGISTER</a></button>
-                            <button id='prblemstmt'>PROBLEM STATEMENT</button>
+                            "?>
+
+                        <?php 
+                            if($found==1){
+                                echo "You already registered";
+                            }
+                            else{
+                                echo "<button id='register'><a href='workshopRegistration.php?id=$fetchedEvent'>REGISTER</a></button>";
+                            }
+                            echo "<button id='prblemstmt'>PROBLEM STATEMENT</button>
                         </div>
                     </div>
                 </section>
