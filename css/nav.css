@@ -43,7 +43,9 @@
 .nav_row_half .nav_list {
   padding-left: 5em;
 }
-
+li:hover a{
+  color:#19D2A6 !important;
+}
 .nav_row_half .nav_list .nav_list_item {
   display: inline-block;
   padding: 0 1em;
