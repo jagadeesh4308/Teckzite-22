@@ -1,7 +1,10 @@
 <?php 
-    include "repeats/header.php";echo "<section id='main_container'>";
+    include "repeats/header.php";
+    include "includes/connect.php";
     include "./includes/usrGetBack.php";
 ?>
+
+
 <?php
     //If new user Insert to DB
     $useremail = $_SESSION['user_email_address'];
@@ -51,6 +54,9 @@ if (isset($_POST['updateProfile'])){
 }
 
 ?>
+
+<section id='main_container'>
+
 <h1 id="rhead">REGISTRATION</h1>
     <form id="rform" method="post" action="#" enctype="multipart/form-data">
         <!-- -------------- -->
@@ -127,6 +133,7 @@ if (isset($_POST['updateProfile'])){
             <input type="submit" id='rsubmit' name="updateProfile" value="Update"></input>
     </form>
 </section>
+
 <?php
     include "repeats/footer.php";
 ?>

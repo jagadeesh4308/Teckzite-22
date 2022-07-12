@@ -1,12 +1,10 @@
 <?php 
 
-session_start();
-$usr = $_SESSION['user_email_address'];
-$usrid = $_SESSION['tzID'];
-$dept = $_SESSION['dept'];
+include "session_data.php";
 
 if(!$usr){
-    // header("Location:index.php");
+    echo "<div class='alert alert-warning' role='warning'>Please login....</div>";
+    header("refresh: 1; url = index.php");
 }
 
 ?>

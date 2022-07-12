@@ -13,7 +13,6 @@
     <a href="logout.php">logout</a>
     <br>
     <div id="as2">
-z
     <?php 
             
         $useremail = $_SESSION['user_email_address'];
